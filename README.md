@@ -1,38 +1,41 @@
 # TrafficSignRecognitionUsingCNN
 
-🔎 Traffic Sign Recognition using CNN | BTSC Dataset
+# 🚦 Traffic Sign Recognition using CNN
 
-This project implements a Convolutional Neural Network (CNN) for traffic sign recognition using the Belgium Traffic Sign Classification (BTSC) dataset. The goal is to enhance driver assistance systems by accurately identifying traffic signs under diverse real-world conditions such as occlusion, poor lighting, and motion blur.
+This project implements a Convolutional Neural Network (CNN) for classifying traffic signs from the Belgium Traffic Sign Classification (BTSC) dataset. The model is trained on grayscale, augmented images and achieves high accuracy in real-world scenarios.
 
-🚀 Features
-	•	Achieved 98.45% test accuracy using an optimized CNN model.
-	•	Used data augmentation (rotation, zoom, pan, brightness change) to expand the training dataset from 4575 to 22,875 images.
-	•	Designed a 4-layer CNN architecture with dropout regularization and ReLU activations for robust feature extraction.
-	•	Applied grayscale conversion and one-hot encoding for improved preprocessing and model compatibility.
-	•	Tested with real-life car view images, achieving near-perfect recognition in practical scenarios.
+## 🧠 Model Overview
 
-🧠 Model Architecture
-	•	Convolutional Layers: 4 layers with decreasing neurons (64 → 24), using kernel sizes 5 and 3.
-	•	Dropout Layers: Added after convolution and dense layers for regularization.
-	•	Classification Stage: 1 Dense (75 neurons) + Output (62 neurons, softmax).
-	•	Training Parameters: 100 epochs, batch size 50, learning rate 0.001, Adam optimizer.
+- 4 Convolutional layers with ReLU activation
+- Dropout for regularization
+- 1 Dense layer (75 neurons) + Output layer (62 classes, softmax)
+- Trained for 100 epochs with Adam optimizer (lr = 0.001, batch size = 50)
 
-📂 Dataset
-	•	Original Dataset: 7095 images, 62 traffic sign classes (BTSC).
-	•	Augmented Dataset: 22,875 training images with class balancing.
-	•	Preprocessing: Resized to 32×32, grayscale conversion, reshaped for CNN compatibility.
+## 📦 Files Included
 
-📈 Results
-	•	Training Accuracy: 98.39%
-	•	Testing Accuracy: 98.45%
-	•	Comparison: Outperforms or matches several state-of-the-art methods in recent publications.
+- `CNN_Grayscale.ipynb` – Model training and evaluation code
+- `model.h5` – Trained CNN model weights
 
-📌 Applications
-	•	Advanced Driver-Assistance Systems (ADAS)
-	•	Autonomous Vehicle Navigation
-	•	Real-time Traffic Sign Detection
+## 🚀 How to Use
 
-🔧 Future Work
-	•	Experimenting with different optimizers and loss functions
-	•	Implementing batch normalization
-	•	Using grid search for hyperparameter tuning
+1. Clone the repository.
+2. Open `CNN_Grayscale.ipynb` in Jupyter or Google Colab.
+3. Run the notebook to see model architecture, training process, and evaluation.
+4. Load `model.h5` for inference.
+
+## 🏆 Accuracy
+
+- **Training Accuracy:** 98.39%
+- **Testing Accuracy:** 98.45%
+
+## 📚 Dataset
+
+- **Source:** Belgium Traffic Sign Classification (BTSC)
+- **Preprocessing:** Grayscale conversion, resized to 32x32, and data augmentation
+
+## 🛠 Requirements
+
+Install dependencies with:
+
+```bash
+pip install -r requirements.txt
