@@ -33,3 +33,9 @@ This project implements a Convolutional Neural Network (CNN) for classifying tra
 - **Source:** Belgium Traffic Sign Classification (BTSC)
 - **Preprocessing:** Grayscale conversion, resized to 32x32, and data augmentation
 
+## 👥 Authors
+
+- Robayed Ashraf | robayedashraf@gmail.com
+- Chong Fai Wong | jason1999689@gmail.com
+- Asim Santos Poudel | asimsantospoudel@gmail.com
+
